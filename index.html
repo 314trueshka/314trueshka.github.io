@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Публичный домъ Анны Марковны</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Модальное окно для проверки возраста -->
+    <div id="ageCheckModal" class="modal">
+        <div class="modal-content">
+            <h2>Господинъ, вамъ есть 18 лѣтъ?</h2>
+            <p>Для доступа къ нашему заведенію вамъ должно быть не менѣе 18 лѣтъ.</p>
+            <button onclick="confirmAge(true)">Да, мнѣ есть 18 лѣтъ</button>
+            <button onclick="confirmAge(false)">Нѣтъ, я младше</button>
+        </div>
+    </div>
+
+    <!-- Основной контент сайта (скрыт до проверки возраста) -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-content">
+                <h1>Публичный домъ Анны Марковны</h1>
+                <p>Пріютъ изысканныхъ удовольствій и утонченныхъ наслажденій</p>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>О нашемъ домѣ</h2>
+            <p>Нашъ домъ — это мѣсто, гдѣ каждый гость чувствуетъ себя особеннымъ. Мы гордимся своей репутаціей и стремимся къ тому, чтобы каждый посѣтитель уходилъ отъ насъ съ чувствомъ глубокаго удовлетворенія и желаніемъ вернуться вновь.</p>
+            <img src="old_interior.jpg" alt="Интерьеръ дома">
+        </section>
+
+        <section id="ladies">
+            <h2>Наши дѣвицы</h2>
+            <div class="lady-card">
+                <img src="marianna.jpg" alt="Маріанна">
+                <h3>Маріанна</h3>
+                <p>Возрастъ: 22 года. Стать: высокая, стройная. Волосы каштановые, глаза голубые.</p>
+            </div>
+            <div class="lady-card">
+                <img src="ludmila.jpg" alt="Людмила">
+                <h3>Людмила</h3>
+                <p>Возрастъ: 25 летъ. Стать: средняго роста, пышныя формы. Волосы рыжіе, глаза зеленые.</p>
+            </div>
+            <!-- Добавьте других дѣвицъ по аналогии -->
+        </section>
+
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Уютныя комнаты, обставленныя съ изысканнымъ вкусомъ.</li>
+                <li>Широкій выборъ прекрасныхъ дамъ на любой вкусъ.</li>
+                <li>Вѣжливое и предупредительное обслуживаніе.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <h2>Какъ насъ найти</h2>
+            <p>Адресъ: Улица Ямская, домъ Анны Марковны. Часы работы: круглосуточно.</p>
+            <button onclick="contactUs()">Связаться съ нами</button>
+        </footer>
+
+        <!-- Остальные разделы сайта -->
+    </div>
+
+    <!-- Заглушка для пользователей младше 18 лет -->
+    <div id="ageWarning" class="hidden">
+        <div class="warning-content">
+            <h2>Увы, господинъ, вы слишкомъ малы для нашего заведенія!</h2>
+            <p>Пожалуйста, покиньте его и возвращайтесь, когда достигнете совершеннолѣтія.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
