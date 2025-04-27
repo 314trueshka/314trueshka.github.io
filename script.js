@@ -27,3 +27,21 @@ window.onload = function () {
     const modal = document.getElementById('ageCheckModal');
     modal.style.display = 'flex';
 };
+// Выравниваем высоту текстовых блоков
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.lady-card');
+    let maxHeight = 0;
+    
+    // Находим максимальную высоту
+    cards.forEach(card => {
+        const textBlock = card.querySelector('p');
+        if (textBlock.offsetHeight > maxHeight) {
+            maxHeight = textBlock.offsetHeight;
+        }
+    });
+    
+    // Применяем ко всем карточкам
+    cards.forEach(card => {
+        card.querySelector('p').style.minHeight = maxHeight + 'px';
+    });
+});
