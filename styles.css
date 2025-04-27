@@ -52,47 +52,54 @@ h2 {
     color: #8b0000;
     text-align: center;
 }
-ladies-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+
+.ladies-horizontal-scroll {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+    background: #f5f0e6;
+    border-top: 1px solid #d4b483;
+    border-bottom: 1px solid #d4b483;
+    margin: 30px 0;
 }
 
-/* Карточка */
+/* Внутренний контейнер с карточками */
+.scroll-container {
+    display: inline-flex;
+    gap: 25px;
+    padding: 0 20px;
+    min-width: 100%;
+}
+
+/* Стили карточек */
 .lady-card {
-    width: 280px; /* Фиксированная ширина */
+    flex: 0 0 280px; /* Фиксированная ширина без растягивания */
     background: #fffaf0;
-    border: 1px solid #d4b483;
+    border: 1px solid #8b0000;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Контейнер для фото */
-.photo-wrapper {
-    width: 100%;
-    height: 320px; /* Фиксированная высота */
-    overflow: hidden;
-    position: relative;
-}
-
-/* Обработка фото */
-.vintage-portrait {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Кадрирование с сохранением пропорций */
-    filter: sepia(50%) contrast(110%) brightness(90%);
-    border-bottom: 1px solid #d4b483;
     transition: transform 0.3s;
 }
 
-.vintage-portrait:hover {
-    transform: scale(1.05);
+.lady-card:hover {
+    transform: translateY(-5px);
 }
 
-/* Текстовые элементы */
+.photo-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.vintage-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(50%) contrast(110%) brightness(90%);
+    border-bottom: 1px solid #d4b483;
+}
+
 .lady-card h3 {
     color: #8b0000;
     text-align: center;
@@ -106,11 +113,21 @@ ladies-gallery {
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.4;
+    min-height: 60px;
 }
 
-.lady-card img {
-    width: 100%;
-    border-radius: 10px;
+/* Стили для скроллбара */
+.ladies-horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ladies-horizontal-scroll::-webkit-scrollbar-track {
+    background: #f5f0e6;
+}
+
+.ladies-horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #8b0000;
+    border-radius: 4px;
 }
 
 footer {
