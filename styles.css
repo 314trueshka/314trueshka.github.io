@@ -113,17 +113,7 @@ h2 {
     filter: sepia(30%) contrast(110%);
 }
 
-.vintage-portrait {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center; /* Добавляем центрирование */
-    filter: sepia(50%) contrast(110%) brightness(90%);
-    transition: transform 0.3s;
-}
+
 .lady-card h3 {
     color: #8b0000;
     text-align: center;
