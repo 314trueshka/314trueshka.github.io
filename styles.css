@@ -52,7 +52,76 @@ h2 {
     color: #8b0000;
     text-align: center;
 }
+/* Стили для секции "О доме" */
+#about {
+    text-align: center;
+    padding: 30px;
+    background: #fffaf0 url('images/old-paper-texture.jpg');
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 900px;
+}
 
+/* Контейнер для интерьера */
+.interior-container {
+    position: relative;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Само изображение */
+.vintage-interior {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(50%) contrast(110%) brightness(95%);
+    border: 10px solid #f5f0e6;
+    box-sizing: border-box;
+    transition: transform 0.5s;
+}
+
+/* Декоративная рамка */
+.interior-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #8b0000;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Подпись к фото */
+.interior-caption {
+    font-style: italic;
+    color: #5a4a3a;
+    margin: 15px 0 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Эффекты при наведении */
+.interior-container:hover .vintage-interior {
+    transform: scale(1.02);
+    filter: sepia(30%) contrast(120%) brightness(100%);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .interior-container {
+        margin: 20px -15px;
+        border-radius: 0;
+    }
+    
+    .vintage-interior {
+        border-width: 5px;
+    }
+}
 /* Горизонтальный скролл карточек */
 .ladies-horizontal-scroll {
     width: 100%;
