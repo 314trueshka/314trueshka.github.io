@@ -224,6 +224,67 @@ footer h2 {
 footer p {
     margin: 10px 0;
 }
+/* Контейнер для QR-кода */
+.qr-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 300px;
+}
+
+/* Фоновая подложка */
+.qr-background {
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f3e9 0%, #e6ddcb 100%);
+    border: 3px double #8b0000;
+    border-radius: 5px;
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.1),
+        inset 0 0 15px rgba(139, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративные элементы фона */
+.qr-background::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* Сам QR-код */
+.qr-code {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background: white;
+    border: 1px solid #d4b483;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Подпись */
+.qr-caption {
+    font-style: italic;
+    color: #5a4a3a;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Эффекты при наведении */
+.qr-background:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 6px 12px rgba(0,0,0,0.15),
+        inset 0 0 15px rgba(139, 0, 0, 0.3);
+}
 
 /* Анимации */
 @keyframes fadeIn {
