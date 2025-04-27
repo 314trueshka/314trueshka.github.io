@@ -96,18 +96,16 @@ h2 {
     width: 100%;
     height: 320px;
     overflow: hidden;
-    position: relative; /* Добавляем позиционирование */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .vintage-portrait {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    max-height: 100%;
+    max-width: 100%;
     height: auto;
+    width: auto;
     filter: sepia(50%) contrast(110%) brightness(90%);
     border-bottom: 1px solid #d4b483;
 }
