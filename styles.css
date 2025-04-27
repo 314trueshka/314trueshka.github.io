@@ -52,74 +52,55 @@ h2 {
     color: #8b0000;
     text-align: center;
 }
-/* Стили для секции "О доме" */
-#about {
-    text-align: center;
-    padding: 30px;
-    background: #fffaf0 url('images/old-paper-texture.jpg');
-    border: 2px solid #8b0000;
-    border-radius: 10px;
-    margin: 30px auto;
+/* Контейнер для всего блока */
+.interior-wrapper {
     max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
 }
 
-/* Контейнер для интерьера */
-.interior-container {
-    position: relative;
-    margin: 30px auto;
-    max-width: 800px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    overflow: hidden;
+/* Рамка для фото */
+.interior-border {
+    padding: 12px;
+    background: #f5f0e6;
+    border: 1px solid #8b0000;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 0 auto;
 }
 
 /* Само изображение */
 .vintage-interior {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
-    filter: sepia(50%) contrast(110%) brightness(95%);
-    border: 10px solid #f5f0e6;
+    filter: sepia(40%) contrast(110%) brightness(95%);
+    border: 6px solid #fffaf0;
     box-sizing: border-box;
-    transition: transform 0.5s;
+    transition: all 0.4s ease;
 }
 
-/* Декоративная рамка */
-.interior-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid #8b0000;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* Подпись к фото */
+/* Подпись */
 .interior-caption {
     font-style: italic;
     color: #5a4a3a;
-    margin: 15px 0 0;
+    margin-top: 15px;
     font-size: 0.9rem;
-    text-align: center;
 }
 
 /* Эффекты при наведении */
-.interior-container:hover .vintage-interior {
-    transform: scale(1.02);
+.interior-border:hover .vintage-interior {
     filter: sepia(30%) contrast(120%) brightness(100%);
+    transform: scale(1.01);
 }
 
-/* Адаптация для мобильных */
+/* Адаптация под размер экрана */
 @media (max-width: 768px) {
-    .interior-container {
-        margin: 20px -15px;
-        border-radius: 0;
+    .interior-border {
+        padding: 8px;
     }
-    
     .vintage-interior {
-        border-width: 5px;
+        border-width: 4px;
     }
 }
 /* Горизонтальный скролл карточек */
