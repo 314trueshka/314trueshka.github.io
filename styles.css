@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
     font-family: 'Old Standard TT', serif;
     background-color: #f4e9d8;
@@ -5,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 
 header {
     background-color: #8b0000;
@@ -47,37 +47,45 @@ section {
     border-radius: 10px;
 }
 
+h2 {
+    font-size: 2rem;
+    color: #8b0000;
+    text-align: center;
+}
+
+/* Горизонтальный скролл карточек */
 .ladies-horizontal-scroll {
     width: 100%;
     overflow-x: auto;
-    padding: 20px 0;
+    padding: 30px 0;
     background: #f5f0e6;
     border-top: 1px solid #d4b483;
     border-bottom: 1px solid #d4b483;
-    margin: 30px 0;
-    white-space: nowrap; /* Важно! */
+    margin: 40px 0;
+    white-space: nowrap;
 }
 
-/* Внутренний контейнер с карточками */
 .scroll-container {
-    display: inline-flex;
-    gap: 25px;
+    display: inline-block;
+    white-space: nowrap;
     padding: 0 20px;
-    min-width: min-content; /* Изменили с 100% */
 }
 
-/* Стили карточек */
 .lady-card {
-    flex: 0 0 280px; /* Фиксированная ширина без растягивания */
+    display: inline-block;
+    width: 280px;
     background: #fffaf0;
     border: 1px solid #8b0000;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 25px;
+    vertical-align: top;
     transition: transform 0.3s;
-    display: inline-flex; /* Добавили */
-    flex-direction: column; /* Добавили */
-    vertical-align: top; /* Добавили */
+}
+
+.lady-card:last-child {
+    margin-right: 0;
 }
 
 .lady-card:hover {
@@ -101,31 +109,34 @@ section {
 .lady-card h3 {
     color: #8b0000;
     text-align: center;
-    padding: 10px;
+    padding: 15px 10px 5px;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .lady-card p {
     padding: 0 15px 15px;
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
     min-height: 60px;
+    white-space: normal;
 }
 
 /* Стили для скроллбара */
 .ladies-horizontal-scroll::-webkit-scrollbar {
-    height: 8px;
+    height: 10px;
 }
 
 .ladies-horizontal-scroll::-webkit-scrollbar-track {
     background: #f5f0e6;
+    border-radius: 5px;
 }
 
 .ladies-horizontal-scroll::-webkit-scrollbar-thumb {
     background: #8b0000;
-    border-radius: 4px;
+    border-radius: 5px;
+    border: 2px solid #f5f0e6;
 }
 
 footer {
@@ -138,12 +149,14 @@ footer {
 
 footer h2 {
     margin: 0;
+    color: #ffd700;
 }
 
 footer p {
     margin: 10px 0;
 }
 
+/* Анимации */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -152,9 +165,8 @@ footer p {
 section {
     animation: fadeIn 1s ease-in-out;
 }
-/* Основные стили */
 
-/* Модальное окно */
+/* Модальные окна */
 .modal {
     display: flex;
     justify-content: center;
@@ -170,34 +182,38 @@ section {
 
 .modal-content {
     background-color: #fffaf0;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #8b0000;
+    max-width: 500px;
+    width: 90%;
 }
 
 .modal-content h2 {
     color: #8b0000;
+    margin-top: 0;
 }
 
 .modal-content button {
     background-color: #8b0000;
     color: #ffd700;
     border: none;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 12px 25px;
+    margin: 15px 10px 0;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
+    transition: all 0.3s;
 }
 
 .modal-content button:hover {
     background-color: #6b0000;
+    transform: translateY(-2px);
 }
 
-/* Заглушка для пользователей младше 18 лет */
 #ageWarning {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -205,23 +221,25 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f4e9d8;
+    background-color: rgba(244, 233, 216, 0.95);
     z-index: 1000;
 }
 
 .warning-content {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     border: 2px solid #8b0000;
     border-radius: 10px;
     background-color: #fffaf0;
+    max-width: 500px;
+    width: 90%;
 }
 
 .warning-content h2 {
     color: #8b0000;
+    margin-top: 0;
 }
 
-/* Скрытие основного контента */
 .hidden {
     display: none;
 }
