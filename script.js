@@ -3,22 +3,21 @@ function visitHouse() {
 }
 
 function showContacts() {
-    document.getElementById('vintage-contacts').classList.remove('hidden_contact');
-    document.body.style.overflow = 'hidden_contact'; // Блокируем скролл страницы
+  document.getElementById('vintageContacts').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
 }
 
 function hideContacts() {
-    document.getElementById('vintage-contacts').classList.add('hidden_contact');
-    document.body.style.overflow = ''; // Восстанавливаем скролл
+  document.getElementById('vintageContacts').style.display = 'none';
+  document.body.style.overflow = ''; // Восстанавливаем скролл
 }
 
-// Закрытие по клику вне окна
-window.onclick = function(event) {
-    const modal = document.getElementById('vintage-contacts');
-    if (event.target == modal) {
-        hideContacts();
-    }
-}
+// Закрытие при клике вне окна
+window.addEventListener('click', function(event) {
+  if (event.target == document.getElementById('vintageContacts')) {
+    hideContacts();
+  }
+});
 // Функция для проверки возраста
 function confirmAge(isAdult) {
     const modal = document.getElementById('ageCheckModal');

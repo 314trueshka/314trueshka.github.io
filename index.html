@@ -104,12 +104,34 @@
         </section>
 
         <section id="services">
+
             <h2>Наши услуги</h2>
             <ul>
                 <li>Уютныя комнаты, обставленныя съ изысканнымъ вкусомъ.</li>
                 <li>Широкій выборъ прекрасныхъ дамъ на любой вкусъ.</li>
                 <li>Вѣжливое и предупредительное обслуживаніе.</li>
             </ul>
+            <!--
+            <div class="qr-grand-container">
+                <h3 class="qr-title">Публичный Домъ Анны Марковны</h3>
+                
+                <div class="qr-luxury-frame">
+                     Лепной узор сверху 
+                    <div class="qr-ornament-top"></div>
+                    
+                     Основной блок с QR-кодом 
+                    <div class="qr-vintage-card">
+                        <div class="qr-silhouettes"></div>
+                        <img src="images/qr-code.png" alt="QR-код в салон" class="qr-code">
+                    </div>
+                    
+                     Лепной узор снизу 
+                    <div class="qr-ornament-bottom"></div>
+                </div>
+                
+                <p class="qr-slogan">"Доступныя наслажденія<br>для истинныхъ ценителей<br>отъ 2 рублей въ часъ"</p>
+            </div>
+            -->
         </section>
 
         <footer>
@@ -117,40 +139,29 @@
             <p>Адресъ: Улица Ямская, домъ Анны Марковны. Часы работы: круглосуточно.</p>
             <button onclick="showContacts()">Связаться съ нами</button>
 
-            <div id="vintage-contacts" class="vintage-modal hidden_contact">
-                <div class="vintage-modal-content">
-                    <span class="close-btn" onclick="hideContacts()">×</span>
-                    <h4>Способы связи</h4>
-                    <div class="contact-method">
-                        <img src="images/vk_icon.png" alt="ВКонтакте" class="contact-icon">
-                        <a href="https://vk.com/nashteatr_yaroslavl" target="_blank" class="vintage-link">Наша группа въ ВКонтакте</a>
-                    </div>
-                    <div class="contact-method">
-                        <img src="images/whatsapp_icon.png" alt="WhatsApp" class="contact-icon">
-                        <a href="https://wa.me/+74852910122" target="_blank" class="vintage-link">Пишите въ WhatsApp</a>
-                    </div>
-                    <p class="vintage-note">Или: Улица Ямская, домъ Анны Марковны<br>(спросите любого извозчика)</p>
-                </div>
-            </div>
-            <div class="qr-grand-container">
-                <h3 class="qr-title">Публичный Домъ Анны Марковны</h3>
+            <div id="vintageContacts" class="contacts-modal">
+              <div class="contacts-content">
+                <h4>Почтеннѣйшіе господа!</h4>
                 
-                <div class="qr-luxury-frame">
-                    <!-- Лепной узор сверху -->
-                    <div class="qr-ornament-top"></div>
-                    
-                    <!-- Основной блок с QR-кодом -->
-                    <div class="qr-vintage-card">
-                        <div class="qr-silhouettes"></div>
-                        <img src="images/qr-code.png" alt="QR-код в салон" class="qr-code">
-                    </div>
-                    
-                    <!-- Лепной узор снизу -->
-                    <div class="qr-ornament-bottom"></div>
+                <div class="contact-row">
+                  <img src="images/vk_icon.png" alt="" class="contact-icon">
+                  <a href="https://vk.com/ваша_группа" target="_blank" class="contact-link">ВКонтакте</a>
                 </div>
                 
-                <p class="qr-slogan">"Доступныя наслажденія<br>для истинныхъ ценителей<br>отъ 2 рублей въ часъ"</p>
+                <div class="contact-row">
+                  <img src="images/wa_icon.png" alt="" class="contact-icon">
+                  <a href="https://wa.me/ваш_номер" target="_blank" class="contact-link">WhatsApp</a>
+                </div>
+                
+                <p class="contacts-footer">
+                  <em>Или: Улица Ямская, домъ Анны Марковны<br>
+                  (каждый извозчикъ знаетъ)</em>
+                </p>
+                
+                <button onclick="hideContacts()" class="close-btn">Закрыть</button>
+              </div>
             </div>
+
         </footer>
 
         <!-- Остальные разделы сайта -->
