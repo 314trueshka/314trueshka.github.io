@@ -34,7 +34,20 @@ function confirmAge(isAdult) {
         ageWarning.style.display = 'flex';
     }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    const staffCards = document.querySelectorAll('.staff-card');
+    
+    staffCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.2}s`;
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100);
+    });
+});
 // Показываем модальное окно при загрузке страницы
 window.onload = function () {
     const modal = document.getElementById('ageCheckModal');
