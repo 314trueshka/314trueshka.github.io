@@ -224,36 +224,76 @@ footer h2 {
 footer p {
     margin: 10px 0;
 }
-/* Контейнер для QR-кода */
-.qr-container {
-    text-align: center;
+/* Основной контейнер */
+.qr-grand-container {
+    max-width: 320px;
     margin: 40px auto;
-    max-width: 300px;
-}
-
-/* Фоновая подложка */
-.qr-background {
-    padding: 20px;
-    background: linear-gradient(135deg, #f8f3e9 0%, #e6ddcb 100%);
-    border: 3px double #8b0000;
-    border-radius: 5px;
-    box-shadow: 
-        0 4px 8px rgba(0,0,0,0.1),
-        inset 0 0 15px rgba(139, 0, 0, 0.2);
+    text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
-/* Декоративные элементы фона */
-.qr-background::before {
+/* Заголовок */
+.qr-title {
+    color: #8b0000;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.qr-title::after {
     content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #d4b483;
+    margin: 10px auto;
+}
+
+/* Роскошная рамка */
+.qr-luxury-frame {
+    background: #fffaf0;
+    border: 3px solid #8b0000;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Лепные узоры */
+.qr-ornament-top,
+.qr-ornament-bottom {
+    height: 20px;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,10 Q25,20 50,10 T100,10" fill="none" stroke="%238b0000" stroke-width="1"/></svg>') 
+        center/contain no-repeat;
+    margin: 0 -15px;
+}
+
+.qr-ornament-bottom {
+    transform: rotate(180deg);
+}
+
+/* Карточка с QR-кодом */
+.qr-vintage-card {
+    background: #f5f0e6;
+    padding: 25px;
+    margin: 10px 0;
+    position: relative;
+    border: 1px solid #d4b483;
+}
+
+/* Силуэты девушек */
+.qr-silhouettes {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 1px solid rgba(139, 0, 0, 0.3);
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.05"><path d="M30,180 Q50,100 70,180 M90,180 Q110,80 130,180 M150,180 Q170,120 190,180" stroke="%238b0000" stroke-width="2" fill="none"/></svg>');
+    z-index: 1;
 }
 
 /* Сам QR-код */
@@ -263,27 +303,35 @@ footer p {
     height: auto;
     display: block;
     margin: 0 auto;
-    padding: 10px;
+    position: relative;
+    z-index: 2;
+    filter: sepia(30%) contrast(110%);
+    border: 1px solid #8b0000;
+    padding: 5px;
     background: white;
-    border: 1px solid #d4b483;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Подпись */
-.qr-caption {
+/* Рекламный слоган */
+.qr-slogan {
     font-style: italic;
-    color: #5a4a3a;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    color: #8b0000;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-top: 15px;
 }
 
-/* Эффекты при наведении */
-.qr-background:hover {
-    transform: translateY(-3px);
-    box-shadow: 
-        0 6px 12px rgba(0,0,0,0.15),
-        inset 0 0 15px rgba(139, 0, 0, 0.3);
+.qr-slogan::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #8b0000;
+    margin: 0 auto 15px;
+    opacity: 0.6;
 }
 
 /* Анимации */
