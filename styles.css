@@ -488,3 +488,6 @@ section {
 .hidden {
     display: none;
 }
+.hidden_contact {
+    display: none;
+}

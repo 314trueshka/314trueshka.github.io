@@ -3,12 +3,12 @@ function visitHouse() {
 }
 
 function showContacts() {
-    document.getElementById('vintage-contacts').classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+    document.getElementById('vintage-contacts').classList.remove('hidden_contact');
+    document.body.style.overflow = 'hidden_contact'; // Блокируем скролл страницы
 }
 
 function hideContacts() {
-    document.getElementById('vintage-contacts').classList.add('hidden');
+    document.getElementById('vintage-contacts').classList.add('hidden_contact');
     document.body.style.overflow = ''; // Восстанавливаем скролл
 }
 
