@@ -455,6 +455,7 @@ section {
   border: 3px double #8b0000;
   max-width: 400px;
   width: 90%;
+  color: #8b0000;
   text-align: center;
   position: relative;
 }
