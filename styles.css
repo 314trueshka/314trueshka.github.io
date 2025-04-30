@@ -353,10 +353,11 @@ section {
 }
 
 .staff-section h2 {
-    text-align: center;
-    color: #8b0000;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fffaf0;
+    border: 2px solid #8b0000;
+    border-radius: 10px;
 }
 
 .staff-container {
