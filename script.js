@@ -2,8 +2,22 @@ function visitHouse() {
     alert("Добро пожаловать въ нашъ домъ! Анна Марковна ждетъ васъ.");
 }
 
-function contactUs() {
-    alert("Свяжитесь съ нами по адресу: Улица Ямская, домъ Анны Марковны. Или спросите у извозчика — каждый знаетъ!");
+function showContacts() {
+    document.getElementById('vintage-contacts').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+}
+
+function hideContacts() {
+    document.getElementById('vintage-contacts').classList.add('hidden');
+    document.body.style.overflow = ''; // Восстанавливаем скролл
+}
+
+// Закрытие по клику вне окна
+window.onclick = function(event) {
+    const modal = document.getElementById('vintage-contacts');
+    if (event.target == modal) {
+        hideContacts();
+    }
 }
 // Функция для проверки возраста
 function confirmAge(isAdult) {

@@ -134,7 +134,23 @@
         <footer>
             <h2>Какъ насъ найти</h2>
             <p>Адресъ: Улица Ямская, домъ Анны Марковны. Часы работы: круглосуточно.</p>
-            <button onclick="contactUs()">Связаться съ нами</button>
+            <button onclick="showContacts()">Связаться съ нами</button>
+
+            <div id="vintage-contacts" class="vintage-modal hidden">
+                <div class="vintage-modal-content">
+                    <span class="close-btn" onclick="hideContacts()">×</span>
+                    <h4>Способы связи</h4>
+                    <div class="contact-method">
+                        <img src="images/vk_icon.png" alt="ВКонтакте" class="contact-icon">
+                        <a href="https://vk.com/nashteatr_yaroslavl" target="_blank" class="vintage-link">Наша группа въ ВКонтакте</a>
+                    </div>
+                    <div class="contact-method">
+                        <img src="images/whatsapp_icon.png" alt="WhatsApp" class="contact-icon">
+                        <a href="https://wa.me/+74852910122" target="_blank" class="vintage-link">Пишите въ WhatsApp</a>
+                    </div>
+                    <p class="vintage-note">Или: Улица Ямская, домъ Анны Марковны<br>(спросите любого извозчика)</p>
+                </div>
+            </div>
         </footer>
 
         <!-- Остальные разделы сайта -->
