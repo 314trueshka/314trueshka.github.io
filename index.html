@@ -51,6 +51,7 @@
                         </div>
                         <h3>Тамара</h3>
                         <p>Возрастъ: 23 года. Стать: стройная, граціозная. Волосы тёмно-русые, глаза зелёные. "Бывшая институтка - изящество манеръ и печать трагедіи на челѣ".</p>
+                        <button class="vintage-button" onclick="showProfile('tamara')">Ознакомиться</button>
                     </div>
                     <div class="lady-card">
                         <div class="photo-container">
@@ -61,6 +62,7 @@
                         <h3>Люба</h3>
                         <p>Возрастъ: 19 лѣтъ. Стать: гибкая, миниатюрная. Волосы пепельные, глаза сѣро-голубые "какъ у испуганной косули". Родинка надъ губой.
                         </p>
+                        <button class="vintage-button" onclick="showProfile('luba')">Ознакомиться</button>
                     </div>
                     <div class="lady-card">
                         <div class="photo-container">
@@ -70,6 +72,7 @@
                         </div>
                         <h3>Женя</h3>
                         <p>Возрастъ: 24 года. Стать: высокая, статная. Волосы чёрные, глаза карие. "Цыганская кровь - страсть безъ границъ".</p>
+                        <button class="vintage-button" onclick="showProfile('jenya')">Ознакомиться</button>
                     </div>
                     <div class="lady-card">
                         <div class="photo-container">
@@ -79,6 +82,7 @@
                         </div>
                         <h3>Паша</h3>
                         <p>Возрастъ: 20 лѣтъ. Стать: пышные формы, румяная. Волосы золотисто-бѣлокурые, глаза голубые. "Медовое простодушіе и цвѣтущее здоровье".</p>
+                        <button class="vintage-button" onclick="showProfile('pasha')">Ознакомиться</button>
                     </div>
                     <div class="lady-card">
                         <div class="photo-container">
@@ -88,6 +92,7 @@
                         </div>
                         <h3>Манька Маленькая</h3>
                         <p>Возрастъ: 17 лѣтъ. Стать: миниатюрная, хрупкая. Волосы бѣлокурые, глаза большіе сѣрые. "Мотылёкъ на огнѣ - трогательная недотрога".</p>
+                        <button class="vintage-button" onclick="showProfile('manka')">Ознакомиться</button>
                     </div>
                     <div class="lady-card">
                         <div class="photo-container">
@@ -97,6 +102,7 @@
                         </div>
                         <h3>Соня</h3>
                         <p>Возрастъ: 16 лѣтъ. Стать: изящная, тонкая. Волосы тёмно-каштановые, глаза меланхоличные. "Бывшая гимназистка - печать грусти и книжной мудрости".</p>
+                        <button class="vintage-button" onclick="showProfile('sonya')">Ознакомиться</button>
                     </div>
                 </div>
             </div>
@@ -206,5 +212,45 @@
     </div>
 
     <script src="script.js"></script>
+
+    <div id="profileModal" class="vintage-modal-ancet">
+        <div class="profile-container">
+            <span class="close-btn-ancet" onclick="closeProfile()">×</span>
+            
+            <div class="profile-header">
+                <img id="profilePhoto" src="" alt="" class="main-photo">
+                <div class="profile-info">
+                    <h2 id="profileName">Люба</h2>
+                    <p id="profileAge">Возрастъ: 19 лѣтъ</p>
+                    <p id="profileDesc">"Цвѣтокъ грѣха съ душой ребенка..."</p>
+                </div>
+            </div>
+            
+            <div class="profile-gallery">
+                <img src="images/luba1.jpg" alt="" class="gallery-thumb">
+                <img src="images/luba2.jpg" alt="" class="gallery-thumb">
+            </div>
+            
+            <div class="profile-comments">
+                <h3>Отзывы посѣтителей:</h3>
+                
+                <div class="comment">
+                    <img src="images/platonov.jpg" alt="Платоновъ" class="comment-avatar">
+                    <div class="comment-content">
+                        <h4>Платоновъ</h4>
+                        <p>"Сия дѣвица напоминаетъ мнѣ героиню моего послѣдняго романа. Чистота души необыкновенная!"</p>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <img src="images/rottenberg.jpg" alt="Роттенбергъ" class="comment-avatar">
+                    <div class="comment-content">
+                        <h4>Баронъ Роттенбергъ</h4>
+                        <p>"Рекомендую! За скромной наружностью скрывается истинная страсть. 5 рублей потрачены не напрасно."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

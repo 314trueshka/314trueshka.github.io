@@ -82,3 +82,70 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollContainer.scrollLeft = scrollLeft - walk;
     });
 });
+
+
+// Данные девушек
+const profiles = {
+    'luba': {
+        name: 'Люба',
+        age: '19 лѣтъ',
+        desc: '"Цвѣтокъ грѣха съ душой ребенка. Любитъ конфеты больше денегъ и вѣритъ въ сказочныхъ принцевъ."',
+        mainPhoto: 'images/lovy.jpg',
+        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        comments: [
+            {
+                avatar: 'images/platonov.jpg',
+                name: 'Платоновъ',
+                text: '"Сия дѣвица напоминаетъ мнѣ героиню моего послѣдняго романа. Чистота души необыкновенная!"'
+            },
+            {
+                avatar: 'images/rottenberg.jpg',
+                name: 'Баронъ Роттенбергъ',
+                text: '"Рекомендую! За скромной наружностью скрывается истинная страсть. 5 рублей потрачены не напрасно."'
+            }
+        ]
+    },
+    // Добавьте данные для других девушек по аналогии
+};
+
+function showProfile(id) {
+    const profile = profiles[id];
+    document.getElementById('profileName').textContent = profile.name;
+    document.getElementById('profileAge').textContent = `Возрастъ: ${profile.age}`;
+    document.getElementById('profileDesc').textContent = profile.desc;
+    document.getElementById('profilePhoto').src = profile.mainPhoto;
+    
+    const gallery = document.querySelector('.profile-gallery');
+    gallery.innerHTML = '';
+    profile.photos.forEach(photo => {
+        gallery.innerHTML += `<img src="${photo}" alt="" class="gallery-thumb" onclick="this.parentElement.previousElementSibling.src='${photo}'">`;
+    });
+    
+    const comments = document.querySelector('.profile-comments > div:not(:first-child)');
+    comments.innerHTML = '';
+    profile.comments.forEach(comment => {
+        comments.innerHTML += `
+        <div class="comment">
+            <img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">
+            <div class="comment-content">
+                <h4>${comment.name}</h4>
+                <p>${comment.text}</p>
+            </div>
+        </div>`;
+    });
+    
+    document.getElementById('profileModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProfile() {
+    document.getElementById('profileModal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+// Закрытие по клику вне окна
+window.onclick = function(event) {
+    if (event.target == document.getElementById('profileModal')) {
+        closeProfile();
+    }
+}
