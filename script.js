@@ -94,17 +94,17 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/lihonin.jpg',
+                //avatar: 'images/lihonin.jpg',
                 name: 'Лихонин',
                 text: 'Покоряетъ детской наивностью, взглядомъ щенка безпріютнаго… Жениться бы!'
             },
             {
-                avatar: 'images/proff.jpg',
+                //avatar: 'images/proff.jpg',
                 name: 'Герр Проффессор',
                 text: 'Книжной премудрости не обучена, да и разговоры ея просты.'
             },
             {
-                avatar: 'images/ramzes.jpg',
+                //avatar: 'images/ramzes.jpg',
                 name: 'Рамзес',
                 text: 'Мила, но ужъ больно проста — не для моего круга.'
             }
@@ -119,17 +119,17 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/ramzes.jpg',
+                //avatar: 'images/ramzes.jpg',
                 name: 'Рамзес',
                 text: 'Заразила страстью и буйствомъ нрава! Весь бы вѣкъ свой отдалъ за ночь въ ея объятьяхъ!'
             },
             {
-                avatar: 'images/kolya.jpg',
+                //avatar: 'images/kolya.jpg',
                 name: 'Коля',
                 text: 'Особа пріятной наружности, но строгаго поведенія — къ тѣлу не допуститъ.'
             },
             {
-                avatar: 'images/dogy.jpg',
+                //avatar: 'images/dogy.jpg',
                 name: 'Сабашников',
                 text: 'Сразила въ самое сердце! Красавица — въ губерніи такой не сыщешь!'
             }
@@ -143,17 +143,17 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/pedogog.jpg',
+                //avatar: 'images/pedogog.jpg',
                 name: 'Учитель',
                 text: 'Ну и грабиловка тутъ! А эта куртизанка — форменная змѣя подколодная! Взялъ бы ее на содержаніе, да она въ мои дѣла соваться вздумала — весь куражъ отшила!'
             },
             {
-                avatar: 'images/ramzes.jpg',
+                //avatar: 'images/ramzes.jpg',
                 name: 'Рамзес',
                 text: 'Молодая, бойкая — съ ней и скучать не придется!'
             },
             {
-                avatar: 'images/dogy.jpg',
+                //avatar: 'images/dogy.jpg',
                 name: 'Сабашников',
                 text: 'Сразила въ самое сердце! Красавица — въ губерніи такой не сыщешь!'
             }
@@ -167,12 +167,12 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/izvr.jpg',
+                //avatar: 'images/izvr.jpg',
                 name: 'Извращенецъ',
                 text: 'Самый цвѣтъ. Повезло испить сей нектаръ первому — обожáю такихъ невинныхъ голубокъ.'
             },
             {
-                avatar: 'images/dogy.jpg',
+                //avatar: 'images/dogy.jpg',
                 name: 'Сабашников',
                 text: 'Сразила въ самое сердце! Красавица — въ губерніи такой не сыщешь!'
             }
@@ -186,32 +186,32 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/dogy.jpg',
+                //avatar: 'images/dogy.jpg',
                 name: 'Сабашников',
                 text: 'Сразила въ самое сердце! Красавица — въ губерніи такой не сыщешь!'
             },
             {
-                avatar: 'images/platonov.jpg',
+                //avatar: 'images/platonov.jpg',
                 name: 'Платоновъ',
                 text: 'Эта дѣвица — просто пламя!'
             },
             {
-                avatar: 'images/rottenberg.jpg',
+                //avatar: 'images/rottenberg.jpg',
                 name: 'Баронъ Роттенбергъ',
                 text: 'Что съ ней было — ни съ одной другой не сравнится!'
             },
             {
-                avatar: 'images/rottenberg.jpg',
+                //avatar: 'images/rottenberg.jpg',
                 name: 'Грузинчик',
                 text: 'Не прочь бы отстегать эту дѣльну́ю плоть!'
             },
             {
-                avatar: 'images/rottenberg.jpg',
+                //avatar: 'images/rottenberg.jpg',
                 name: 'СБИС',
                 text: 'Захаживаю къ ней частенько — ужъ больно ладная!'
             },
             {
-                avatar: 'images/rottenberg.jpg',
+                //avatar: 'images/rottenberg.jpg',
                 name: 'Кучерявенький',
                 text: 'Не баба — огонь! Въ постели — какъ на пожаре!'
             }
@@ -225,12 +225,12 @@ const profiles = {
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
-                avatar: 'images/proff.jpg',
+                //avatar: 'images/proff.jpg',
                 name: 'Герр Проффессор',
                 text: 'Дама образованнѣйшая, съ интеллигентными манерами — нынче такихъ мало. И видъ — что твой портретъ въ гостинной!'
             },
             {
-                avatar: 'images/dogy.jpg',
+                //avatar: 'images/dogy.jpg',
                 name: 'Сабашников',
                 text: 'Сразила въ самое сердце! Красавица — въ губерніи такой не сыщешь!'
             }
@@ -260,13 +260,18 @@ function showProfile(id) {
     const commentsTitle = commentsContainer.querySelector('h3');
     commentsContainer.innerHTML = '';
     commentsContainer.appendChild(commentsTitle);
-    
+    const avatarHTML = comment.avatar 
+    ? `<img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">`
+    : `<div class="comment-avatar-initials">${getInitials(comment.name)}</div>`;
+
+
     // Добавляем комментарии по одному
     profile.comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
+        
         commentDiv.innerHTML = `
-            <img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">
+            ${avatarHTML}
             <div class="comment-content">
                 <h4>${comment.name}</h4>
                 <p>${comment.text}</p>
@@ -279,7 +284,9 @@ function showProfile(id) {
     document.getElementById('profileModal').style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
-
+function getInitials(name) {
+    return name.split(' ').map(part => part[0]).join('').toUpperCase();
+}
 
 function closeProfile() {
     document.getElementById('profileModal').style.display = 'none';

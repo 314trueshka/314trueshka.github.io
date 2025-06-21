@@ -773,7 +773,22 @@ section {
     vertical-align: bottom;
     line-height: 0;
 }
-
+.comment-avatar-initials {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b0000 0%, #5a0000 100%);
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    border: 2px solid #d4b483;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
 /* Мобильная адаптация */
 @media (max-width: 768px) {
     .profile-container {
@@ -820,7 +835,13 @@ section {
         margin-right: 0;
         margin-bottom: 10px;
     }
-
+    .comment-avatar-initials {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
     .close-btn-ancet {
         top: 5px;
         right: 10px;
