@@ -260,15 +260,16 @@ function showProfile(id) {
     const commentsTitle = commentsContainer.querySelector('h3');
     commentsContainer.innerHTML = '';
     commentsContainer.appendChild(commentsTitle);
-    const avatarHTML = comment.avatar 
-    ? `<img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">`
-    : `<div class="comment-avatar-initials">${getInitials(comment.name)}</div>`;
 
 
     // Добавляем комментарии по одному
     profile.comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
+
+        const avatarHTML = comment.avatar 
+        ? `<img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">`
+        : `<div class="comment-avatar-initials">${getInitials(comment.name)}</div>`;
         
         commentDiv.innerHTML = `
             ${avatarHTML}
