@@ -221,7 +221,7 @@ const profiles = {
         name: 'Тамара',
         age: '29 лѣтъ',
         desc: 'Бой-дѣвица, образованная, съ тёмно-золотистыми очами, что смотрятъ умно и немного насмѣшливо. По-французски изъясняется свободно, вышиваетъ шелками, танцуетъ — заглядѣнье! Бесѣду поддержитъ любую, будь то о поэзіи или о политикѣ. Говорятъ, была въ институтѣ благородныхъ дѣвицъ... увы, не убереглась.',
-        mainPhoto: 'images/lovy.jpg',
+        mainPhoto: 'images/tamara.jpeg',
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
@@ -241,27 +241,28 @@ const profiles = {
 function showProfile(id) {
     const profile = profiles[id];
     
-    // Заполняем основную информацию
+    // Основная информация
     document.getElementById('profileName').textContent = profile.name;
     document.getElementById('profileAge').textContent = `Возрастъ: ${profile.age}`;
     document.getElementById('profileDesc').textContent = profile.desc;
     document.getElementById('profilePhoto').src = profile.mainPhoto;
     
-    // Очищаем и заполняем галерею
+    // Галерея
     const gallery = document.querySelector('.profile-gallery');
     gallery.innerHTML = '';
     profile.photos.forEach(photo => {
-        gallery.innerHTML += `<img src="${photo}" alt="" class="gallery-thumb" onclick="this.parentElement.previousElementSibling.src='${photo}'">`;
+        const img = document.createElement('img');
+        img.src = photo;
+        img.className = 'gallery-thumb';
+        img.onclick = function() {
+            document.getElementById('profilePhoto').src = photo;
+        };
+        gallery.appendChild(img);
     });
     
-    // Очищаем и заполняем комментарии (исправленная часть)
-    const commentsContainer = document.querySelector('.profile-comments');
-    // Сохраняем заголовок
-    const commentsTitle = commentsContainer.querySelector('h3');
-    commentsContainer.innerHTML = '';
-    commentsContainer.appendChild(commentsTitle);
-    
-    // Добавляем комментарии по одному
+    // Комментарии
+    const commentsWrapper = document.querySelector('.comments-wrapper');
+    commentsWrapper.innerHTML = '';
     profile.comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
@@ -272,10 +273,9 @@ function showProfile(id) {
                 <p>${comment.text}</p>
             </div>
         `;
-        commentsContainer.appendChild(commentDiv);
+        commentsWrapper.appendChild(commentDiv);
     });
     
-    // Показываем модальное окно
     document.getElementById('profileModal').style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
