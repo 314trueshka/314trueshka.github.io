@@ -656,88 +656,124 @@ section {
     z-index: 2000;
     overflow-y: auto;
 }
-@media (max-width: 768px) {
-    .profile-container {
-        margin: 10px;
-        padding: 15px;
-        width: calc(100% - 20px);
-    }
 
-    .profile-header {
-        flex-direction: column;
-    }
-
-    .main-photo {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        margin-bottom: 15px;
-    }
-
-    .profile-info {
-        padding-left: 0;
-    }
-
-    .profile-info h2 {
-        font-size: 1.5rem;
-    }
-
-    .gallery-thumb {
-        width: calc(50% - 10px);
-        height: 120px;
-    }
-
-    .comment {
-        flex-direction: column;
-    }
-
-    .comment-avatar {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .profile-comments h3 {
-        font-size: 1.2rem;
-    }
-
-    .vintage-button {
-        width: 100%;
-        padding: 10px;
-    }
-}
-@media (max-width: 480px) {
-    .profile-info p {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-    
-    .profile-gallery {
-        margin: 10px -5px;
-    }
-    
-    .gallery-thumb {
-        width: calc(50% - 10px);
-        margin: 5px;
-    }
-    
-    .comment-content p {
-        font-size: 0.85rem;
-    }
-    
-    .profile-container {
-        padding: 15px 10px;
-    }
+.profile-container {
+    background: #fffaf0;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 3px double #8b0000;
+    position: relative;
+    animation: fadeInUp 0.5s ease-out;
 }
 
-/* Отключаем hover-эффекты на тач-устройствах */
-@media (hover: none) {
-    .vintage-button:hover,
-    .gallery-thumb:hover {
-        transform: none !important;
-    }
+.close-btn-ancet {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8b0000;
 }
+
+.profile-header {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.main-photo {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    filter: sepia(30%) contrast(110%);
+    border: 5px solid #f5f0e6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.profile-info {
+    flex: 1;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.profile-info h2 {
+    color: #8b0000;
+    border-bottom: 1px dashed #d4b483;
+    padding-bottom: 10px;
+}
+
+.profile-gallery {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.gallery-thumb {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    filter: sepia(40%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.1);
+    filter: sepia(20%);
+}
+
+.profile-comments {
+    margin-top: 40px;
+    border-top: 1px solid #d4b483;
+    padding-top: 20px;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 20px;
+    background: #f5f0e6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: sepia(60%);
+    margin-right: 15px;
+    border: 2px solid #8b0000;
+}
+
+.comment-content h4 {
+    color: #5a4a3a;
+    margin: 0 0 5px 0;
+    font-style: italic;
+}
+
+.comment-content p {
+    margin: 0;
+    color: #5a4a3a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.comment-content p::before {
+    content: "„";
+    font-size: 2em;
+    color: #8b0000;
+    vertical-align: top;
+    line-height: 0;
+}
+.comment-content p::after {
+    content: "“";
+    font-size: 2em;
+    color: #8b0000;
+    vertical-align: bottom;
+    line-height: 0;
+}
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }

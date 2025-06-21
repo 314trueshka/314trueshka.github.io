@@ -228,14 +228,14 @@
                     </div>
                 </div>
                 
-                <!-- Горизонт -->
+                <!-- Околоточный -->
                 <div class="staff-card">
                     <div class="staff-photo-frame">
                         <img src="images/personal/gorizont.png" alt="Горизонтъ">
                     </div>
                     <div class="staff-info">
                         <h3>Семён Яковлевич Горизонтъ</h3>
-                        <p class="staff-position">Околоточный надзиратель</p>
+                        <p class="staff-position">Агентъ по дѣламъ женской прислуги</p>
                         <p class="staff-comment">Опытный и властный сводникъ, чье имя наводитъ трепетъ на обитательницъ "веселыхъ домовъ". Лицо каменное, взглядъ безъ раскаянія, въ карманахъ — всегда контракты и пачки кредитокъ. Дѣвицы шепчутся, что онъ "продаетъ души, какъ мясникъ — туши". Любитъ повторять: "Въ нашемъ дѣлѣ совѣсть — роскошь непозволительная".</p>
                     </div>
                 </div>
@@ -284,34 +284,44 @@
 
     <script src="script.js"></script>
 
-    
-    <div id="profileModal" class="vintage-modal">
+    <div id="profileModal" class="vintage-modal-ancet">
         <div class="profile-container">
-            <span class="close-btn" onclick="closeProfile()">×</span>
+            <span class="close-btn-ancet" onclick="closeProfile()">×</span>
             
             <div class="profile-header">
-                <div class="mobile-photo-container">
-                    <img id="profilePhoto" src="" alt="" class="main-photo">
-                </div>
+                
+                <img id="profilePhoto" src="" alt="" class="main-photo">
                 <div class="profile-info">
+                 
                     <h2 id="profileName"></h2>
                     <p id="profileAge"></p>
                     <p id="profileDesc"></p>
+                
                 </div>
+                
             </div>
             
             <div class="profile-gallery">
-                <!-- Галерея будет добавляться через JS -->
+                <!--
+                <img src="images/luba1.jpg" alt="" class="gallery-thumb">
+                <img src="images/luba2.jpg" alt="" class="gallery-thumb">
+                -->
             </div>
             
             <div class="profile-comments">
                 <h3>Отзывы посѣтителей:</h3>
-                <div class="comments-wrapper">
-                    <!-- Комментарии будут добавляться через JS -->
+                <!--
+                <div class="comment">
+                    <img src="images/platonov.jpg" alt="Платоновъ" class="comment-avatar">
+                    <div class="comment-content">
+                        <h4>Платоновъ</h4>
+                        <p>"Сия дѣвица напоминаетъ мнѣ героиню моего послѣдняго романа. Чистота души необыкновенная!"</p>
+                    </div>
                 </div>
+                
+                -->
             </div>
         </div>
     </div>
-    
 </body>
 </html>

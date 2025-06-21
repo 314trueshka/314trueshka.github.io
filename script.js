@@ -221,7 +221,7 @@ const profiles = {
         name: 'Тамара',
         age: '29 лѣтъ',
         desc: 'Бой-дѣвица, образованная, съ тёмно-золотистыми очами, что смотрятъ умно и немного насмѣшливо. По-французски изъясняется свободно, вышиваетъ шелками, танцуетъ — заглядѣнье! Бесѣду поддержитъ любую, будь то о поэзіи или о политикѣ. Говорятъ, была въ институтѣ благородныхъ дѣвицъ... увы, не убереглась.',
-        mainPhoto: 'images/tamara.jpeg',
+        mainPhoto: 'images/lovy.jpg',
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
         comments: [
             {
@@ -241,28 +241,27 @@ const profiles = {
 function showProfile(id) {
     const profile = profiles[id];
     
-    // Основная информация
+    // Заполняем основную информацию
     document.getElementById('profileName').textContent = profile.name;
     document.getElementById('profileAge').textContent = `Возрастъ: ${profile.age}`;
     document.getElementById('profileDesc').textContent = profile.desc;
     document.getElementById('profilePhoto').src = profile.mainPhoto;
     
-    // Галерея
+    // Очищаем и заполняем галерею
     const gallery = document.querySelector('.profile-gallery');
     gallery.innerHTML = '';
     profile.photos.forEach(photo => {
-        const img = document.createElement('img');
-        img.src = photo;
-        img.className = 'gallery-thumb';
-        img.onclick = function() {
-            document.getElementById('profilePhoto').src = photo;
-        };
-        gallery.appendChild(img);
+        gallery.innerHTML += `<img src="${photo}" alt="" class="gallery-thumb" onclick="this.parentElement.previousElementSibling.src='${photo}'">`;
     });
     
-    // Комментарии
-    const commentsWrapper = document.querySelector('.comments-wrapper');
-    commentsWrapper.innerHTML = '';
+    // Очищаем и заполняем комментарии (исправленная часть)
+    const commentsContainer = document.querySelector('.profile-comments');
+    // Сохраняем заголовок
+    const commentsTitle = commentsContainer.querySelector('h3');
+    commentsContainer.innerHTML = '';
+    commentsContainer.appendChild(commentsTitle);
+    
+    // Добавляем комментарии по одному
     profile.comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
@@ -273,9 +272,10 @@ function showProfile(id) {
                 <p>${comment.text}</p>
             </div>
         `;
-        commentsWrapper.appendChild(commentDiv);
+        commentsContainer.appendChild(commentDiv);
     });
     
+    // Показываем модальное окно
     document.getElementById('profileModal').style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
