@@ -113,7 +113,7 @@ const profiles = {
     // Добавьте данные для других девушек по аналогии
     'jenya': {
         name: 'Женя',
-        age: '22 лѣтъ',
+        age: '20 лѣтъ',
         desc: '"Истинная красавица, какихъ нынѣ мало встрѣтишь даже въ столичныхъ салонахъ. Станъ — гибкій, осанка — гордая, взоръ — грозный. Характеромъ пылкая, нравомъ независимая, держитъ себя какъ королева, хотя и въ "сёмъ печальномъ мѣстѣ". Говорятъ, будто изъ хорошаго рода, да судьба закрутила..."',
         mainPhoto: 'images/jenya.jpeg',
         photos: ['images/luba1.jpg', 'images/luba2.jpg'],
@@ -270,7 +270,7 @@ function showProfile(id) {
         const avatarHTML = comment.avatar 
         ? `<img src="${comment.avatar}" alt="${comment.name}" class="comment-avatar">`
         : `<div class="comment-avatar-initials">${getInitials(comment.name)}</div>`;
-        
+
         commentDiv.innerHTML = `
             ${avatarHTML}
             <div class="comment-content">
