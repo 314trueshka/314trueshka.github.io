@@ -245,13 +245,22 @@ function showProfile(id) {
     document.getElementById('profileName').textContent = profile.name;
     document.getElementById('profileAge').textContent = `Возрастъ: ${profile.age}`;
     document.getElementById('profileDesc').textContent = profile.desc;
-    document.getElementById('profilePhoto').src = profile.mainPhoto;
+    const mainPhoto = document.getElementById('profilePhoto');
+    mainPhoto.src = profile.mainPhoto;
+    mainPhoto.onclick = function() { showFullscreen(profile.mainPhoto); };
     
     // Очищаем и заполняем галерею
     const gallery = document.querySelector('.profile-gallery');
     gallery.innerHTML = '';
     profile.photos.forEach(photo => {
-        gallery.innerHTML += `<img src="${photo}" alt="" class="gallery-thumb" onclick="this.parentElement.previousElementSibling.src='${photo}'">`;
+        const thumb = document.createElement('img');
+        thumb.src = photo;
+        thumb.className = 'gallery-thumb';
+        thumb.onclick = function() { 
+            mainPhoto.src = photo;
+            showFullscreen(photo);
+        };
+        gallery.appendChild(thumb);
     });
     
     // Очищаем и заполняем комментарии (исправленная часть)
@@ -293,7 +302,18 @@ function closeProfile() {
     document.getElementById('profileModal').style.display = 'none';
     document.body.style.overflow = '';
 }
+// Функции для полноэкранного просмотра
+function showFullscreen(src) {
+    const fullscreenImg = document.getElementById('fullscreenImg');
+    fullscreenImg.src = src;
+    document.getElementById('fullscreenView').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
 
+function closeFullscreen() {
+    document.getElementById('fullscreenView').style.display = 'none';
+    document.body.style.overflow = '';
+}
 // Закрытие по клику вне окна
 window.onclick = function(event) {
     if (event.target == document.getElementById('profileModal')) {
