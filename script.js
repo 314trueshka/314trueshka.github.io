@@ -91,7 +91,7 @@ const profiles = {
         age: '19 лѣтъ',
         desc: 'Свѣжая, румяная, точно только что изъ деревни привезенная. Глаза — синіе, ясные, словно незабудки въ росистомъ лугу. Личико веснушчатое, доброе, а улыбка — простодушная, безъ лукавства. Въ ней есть что-то трогательное, дѣтское, будто и не для сего мѣста создана.',
         mainPhoto: 'images/lovy.jpeg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        photos: ['images/lyuba/luba1.png', 'images/lyuba/luba2.jpg'],
         comments: [
             {
                 //avatar: 'images/lihonin.jpg',
@@ -116,7 +116,7 @@ const profiles = {
         age: '20 лѣтъ',
         desc: '"Истинная красавица, какихъ нынѣ мало встрѣтишь даже въ столичныхъ салонахъ. Станъ — гибкій, осанка — гордая, взоръ — грозный. Характеромъ пылкая, нравомъ независимая, держитъ себя какъ королева, хотя и въ "сёмъ печальномъ мѣстѣ". Говорятъ, будто изъ хорошаго рода, да судьба закрутила..."',
         mainPhoto: 'images/jenya.jpeg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        photos: ['images/jenya/jenya1.jpg', 'images/jenya/jenya2.png'],
         comments: [
             {
                 //avatar: 'images/ramzes.jpg',
@@ -140,7 +140,7 @@ const profiles = {
         age: '16 лѣтъ',
         desc: 'Тихая, кроткая, словно голубка. Въ углу сидитъ, лафитъ попиваетъ, а глаза — печальные. Ласкова безъ разбора, но душа у неё — чистая, неиспорченная. Любитъ стихи читать, особенно про "неземную любовь".',
         mainPhoto: 'images/manka.jpeg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        photos: ['images/manka/manka1.png', 'images/manka/manka2.png'],
         comments: [
             {
                 //avatar: 'images/pedogog.jpg',
@@ -164,7 +164,7 @@ const profiles = {
         age: '16 лѣтъ',
         desc: '"Цвѣтокъ грѣха съ душой ребенка. Любитъ конфеты больше денегъ и вѣритъ въ сказочныхъ принцевъ."',
         mainPhoto: 'images/sonka.jpeg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        photos: ['images/sonya/sonya1.png', 'images/sonya/sonya2.png'],
         comments: [
             {
                 //avatar: 'images/izvr.jpg',
@@ -183,7 +183,7 @@ const profiles = {
         age: '27 лѣтъ',
         desc: 'Пышная, бѣлотелая, съ томнымъ взоромъ и ненасытною ласкою. Добродушна, уступчива, готова на всѣ шалости, лишь бы угодить. Въ ней есть что-то жадное, страстное, будто огонь въ печи — и не затопить, и не затушить. Мужчинъ любитъ безъ разбора, но и они ею не брезгуютъ.',
         mainPhoto: 'images/pashka.jpeg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        photos: ['images/pasha/pasha1.jpg', 'images/pasha/pasha2.png'],
         comments: [
             {
                 //avatar: 'images/dogy.jpg',
@@ -221,8 +221,8 @@ const profiles = {
         name: 'Тамара',
         age: '29 лѣтъ',
         desc: 'Бой-дѣвица, образованная, съ тёмно-золотистыми очами, что смотрятъ умно и немного насмѣшливо. По-французски изъясняется свободно, вышиваетъ шелками, танцуетъ — заглядѣнье! Бесѣду поддержитъ любую, будь то о поэзіи или о политикѣ. Говорятъ, была въ институтѣ благородныхъ дѣвицъ... увы, не убереглась.',
-        mainPhoto: 'images/lovy.jpg',
-        photos: ['images/luba1.jpg', 'images/luba2.jpg'],
+        mainPhoto: 'images/tamara.jpeg',
+        photos: ['images/tamara/tamara1.jpg', 'images/tamara/tamara2.jpg'],
         comments: [
             {
                 //avatar: 'images/proff.jpg',
