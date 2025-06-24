@@ -91,7 +91,7 @@ const profiles = {
         age: '19 лѣтъ',
         desc: 'Свѣжая, румяная, точно только что изъ деревни привезенная. Глаза — синіе, ясные, словно незабудки въ росистомъ лугу. Личико веснушчатое, доброе, а улыбка — простодушная, безъ лукавства. Въ ней есть что-то трогательное, дѣтское, будто и не для сего мѣста создана.',
         mainPhoto: 'images/lovy.jpeg',
-        photos: ['images/lyuba/luba1.png', 'images/lyuba/luba2.jpg'],
+        photos: ['images/lyuba/lyuba1.png', 'images/lyuba/lyuba2.jpg'],
         comments: [
             {
                 //avatar: 'images/lihonin.jpg',
@@ -222,7 +222,7 @@ const profiles = {
         age: '29 лѣтъ',
         desc: 'Бой-дѣвица, образованная, съ тёмно-золотистыми очами, что смотрятъ умно и немного насмѣшливо. По-французски изъясняется свободно, вышиваетъ шелками, танцуетъ — заглядѣнье! Бесѣду поддержитъ любую, будь то о поэзіи или о политикѣ. Говорятъ, была въ институтѣ благородныхъ дѣвицъ... увы, не убереглась.',
         mainPhoto: 'images/tamara.jpeg',
-        photos: ['images/tamara/tamara1.jpg', 'images/tamara/tamara2.jpg'],
+        photos: ['images/tamara/tamara1.png', 'images/tamara/tamara2.png'],
         comments: [
             {
                 //avatar: 'images/proff.jpg',
